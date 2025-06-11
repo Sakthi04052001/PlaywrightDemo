@@ -5,7 +5,7 @@ class LoginPage {
         this.page = page
         this.userName = "//input[@placeholder='Enter Email']"
         this.password = "//input[@placeholder='Enter Password']"
-        this.login = " //button[normalize-space()='Sign in']"
+        this.login = "//button[normalize-space()='Sign in']"
     }
     async verifyLoginPage() {
         await expect(this.page.locator("//h2[normalize-space()='Sign In']")).toBeVisible()
