@@ -3,8 +3,8 @@ const { test, expect } = require("@playwright/test")
 test("Verify the login", async ({ page }) => {
     await page.goto("https://test.app.print2block.in/");
 
-    await page.locator('[placeholder="Enter your email"]').type("test@email.com", { delay: 100 });
-    await page.locator('[placeholder="Enter your password"]').type("NewPass@12345", { delay: 100 });
+    await page.locator('[placeholder="Enter your email"]').fill("test@email.com");
+    await page.locator('[placeholder="Enter your password"]').fill("NewPass@12345");
 
     await page.locator("button:text('Login')").click()
 
